@@ -1,0 +1,94 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info sobre el producto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+    }
+    .section {
+      background-color: #f3f3f3;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .form-row {
+      margin-bottom: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Info sobre el producto</div>
+    <div class="section">
+      <div class="title">Datos básicos</div>
+      <div class="form-row">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-row">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+      </div>
+      <div class="form-row">
+        <label for="imagen">Subir Imagen:</label>
+        <input type="file" id="imagen" name="imagen">
+      </div>
+      <div class="form-row">
+        <label for="contador">Añadir contador de visitas:</label>
+        <input type="checkbox" id="contador" name="contador">
+      </div>
+    </div>
+    <div class="section">
+      <div class="title">Datos económicos</div>
+      <div class="form-row">
+        <label for="precio">Precio (en euros):</label>
+        <input type="number" id="precio" name="precio" step="0.01" required>
+      </div>
+      <div class="form-row">
+        <label for="impuesto">Impuesto:</label>
+        <select id="impuesto" name="impuesto">
+          <option value="4%">4%</option>
+          <option value="7%">7%</option>
+          <option value="16%">16%</option>
+          <option value="25%">25%</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Promoción:</label>
+        <div>
+          <input type="radio" id="ninguna" name="promocion" value="Ninguna" checked>
+          <label for="ninguna">Ninguna</label>
+        </div>
+        <div>
+          <input type="radio" id="transporte" name="promocion" value="Transporte gratuito">
+          <label for="transporte">Transporte gratuito</label>
+        </div>
+        <div>
+          <input type="radio" id="descuento" name="promocion" value="Descuento 5%">
+          <label for="descuento">Descuento 5%</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <button type="submit">Guardar Cambios</button>
+      <button type="reset">Borrar los datos introducidos</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos Personales</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+    }
+    .section {
+      background-color: #f3f3f3;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .form-row {
+      margin-bottom: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Datos Personales</div>
+    <div class="section">
+      <div class="form-row">
+        <label for="provincia">Provincia:</label>
+        <select id="provincia" name="provincia">
+          <option value="Buenos Aires">Buenos Aires</option>
+          <option value="Catamarca">Catamarca</option>
+          <option value="Chaco">Chaco</option>
+          <option value="Chubut">Chubut</option>
+          <option value="Córdoba">Córdoba</option>
+          <option value="Corrientes">Corrientes</option>
+          <option value="Entre Ríos">Entre Ríos</option>
+          <option value="Formosa">Formosa</option>
+          <option value="Jujuy">Jujuy</option>
+          <option value="La Pampa">La Pampa</option>
+          <option value="La Rioja">La Rioja</option>
+          <option value="Mendoza">Mendoza</option>
+          <option value="Misiones">Misiones</option>
+          <option value="Neuquén">Neuquén</option>
+          <option value="Río Negro">Río Negro</option>
+          <option value="Salta">Salta</option>
+          <option value="San Juan">San Juan</option>
+          <option value="San Luis">San Luis</option>
+          <option value="Santa Cruz">Santa Cruz</option>
+          <option value="Santa Fe">Santa Fe</option>
+          <option value="Santiago del Estero">Santiago del Estero</option>
+          <option value="Tierra del Fuego">Tierra del Fuego</option>
+          <option value="Tucumán">Tucumán</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" max="2005-12-31" required>
+      </div>
+      <div class="form-row">
+        <label for="temas_interes">Temas de Interés:</label>
+        <select id="temas_interes" name="temas_interes" multiple>
+          <option value="Administracion de base de datos">Administración de base de datos</option>
+          <option value="Analisis y programacion">Análisis y programación</option>
+          <option value="Arquitectura">Arquitectura</option>
+          <option value="Calidad">Calidad</option>
+          <option value="ERP, CRM, Business intelligence">ERP, CRM, Business intelligence</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <button type="submit">Guardar Cambios</button>
+      <button type="reset">Borrar los datos introducidos</button>
+    </div>
+  </div>
+</body>
+</html>
+

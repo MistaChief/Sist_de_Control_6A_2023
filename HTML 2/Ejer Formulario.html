@@ -1,0 +1,72 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rellena tu CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+    }
+    .form-row {
+      margin-bottom: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Rellena tu CV</div>
+    <form action="#" method="POST">
+      <div class="form-row">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="30" required>
+      </div>
+      <div class="form-row">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" maxlength="80" required>
+      </div>
+      <div class="form-row">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" maxlength="10" required>
+      </div>
+      <div class="form-row">
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" pattern="[0-9]{8}" title="Debe contener 8 números" required>
+      </div>
+      <div class="form-row">
+        <label>Sexo:</label>
+        <input type="radio" id="hombre" name="sexo" value="Hombre" required>
+        <label for="hombre">Hombre</label>
+        <input type="radio" id="mujer" name="sexo" value="Mujer">
+        <label for="mujer">Mujer</label>
+      </div>
+      <div class="form-row">
+        <label for="foto">Incluir Foto:</label>
+        <input type="file" id="foto" name="foto">
+      </div>
+      <div class="form-row">
+        <input type="checkbox" id="suscripcion" name="suscripcion" checked>
+        <label for="suscripcion">Suscribirme al boletín de novedades</label>
+      </div>
+      <div class="form-row">
+        <button type="submit">Guardar Cambios</button>
+        <button type="reset">Borrar los datos introducidos</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

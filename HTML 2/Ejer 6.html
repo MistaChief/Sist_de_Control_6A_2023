@@ -1,0 +1,94 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado de la Búsqueda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      margin: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      color: #000;
+    }
+    .cell {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+    }
+    .image-cell {
+      width: 150px;
+      text-align: center;
+    }
+    .data-cell {
+      width: calc(100% - 150px);
+      text-align: center;
+    }
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+    .strike-through {
+      text-decoration: line-through;
+    }
+    .underline {
+      text-decoration: underline;
+    }
+    .image {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Resultado de la Búsqueda</div>
+    <div class="header-row">
+      <div class="cell image-cell">Imagen</div>
+      <div class="cell data-cell">Datos</div>
+    </div>
+    <div class="header-row">
+      <div class="cell image-cell"><img class="image" src="data:image/png;base64,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" alt=""></div>
+      <div class="cell data-cell">
+        <span class="highlight">Portátil - 3GHz - 4GB RAM</span><br>
+        Comprar: <span class="highlight underline">2.999€</span> <span class="strike-through">2.599€</span>
+      </div>
+    </div>
+    <div class="header-row">
+      <div class="cell image-cell"><img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRztcH2ndK2rG9_oOrg78Y7ONXhi9DZYT33Q&usqp=CAU" alt=""></div>
+      <div class="cell data-cell">
+        <span class="highlight">Videocámara - Alta definición 1080p - 60GB</span><br>
+        Comprar: <span class="highlight underline">1.099€</span> <span class="strike-through">999€</span>
+      </div>
+    </div>
+    <div class="header-row">
+      <div class="cell image-cell"><img class="image" src="data:image/png;base64,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" alt=""></div>
+      <div class="cell data-cell">
+        <span class="highlight">Televisor - 46'' - Full HD</span><br>
+        Comprar: <span class="highlight underline">1.999€</span> <span class="strike-through">1.799€</span>
+      </div>
+    </div>
+    <div class="header-row">
+      <div class="cell image-cell"><img class="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAACrCAMAAADiivHpAAAAeFBMVEX////u7u4AAADt7e309PT39/f5+fnx8fH8/PxsbGx0dHShoaGWlpbDw8OHh4eRkZG2trZmZmaenp4RERG7u7vU1NRTU1MrKyvFxcVcXFxAQEBqamqOjo5NTU3Pz8/b29t4eHgkJCTk5OQ5OTmoqKgXFxdHR0cwMDBKZRPiAAAKHklEQVR4nO2de3ujKhDGIYLYNtk9TZtettft9pz9/t/wJKJmiMMdzEX4q/PUjMNPhHlRkJC21HRXqqY1mqo1avkvaXBptIdRJg3RGkIaTP5LGly6O/S9WT48LhKVx4efm4yhjjCQqUBR8vQ7FaS+/H6SAV0KqJ0HQZ9TY9qVZyouC5T4St6cZHn8EqcLqvI/u/iTh9Ni8WdiUJUbqEoBVcGzV/Dsldqi2HUuTovFNa8cruk41AoPVQuqbgtnbVEMLi1HA/PQG/VHPk6LxQd3jc4hVK0HBHwFwVeaNuJ3o94a6nm3vlmut2V5IwtmrO8MDm4tzdkt1MqIYevb9Va2nJ3Cs9ODbqIxNYgVaeSl65q4YojWaMiTyUOTMFQEw4SgVqZq8t63ctUb6K62ob4UUEtDLe+ICyhiuveWFwPq09QehAsoZvLwOQmoqi3dEbQ1uiNEawxnb0t/9rb0Z29Lf/a2cOiOEWNy8C27JY72Ub3xbfJwva1MmlCxmrPOXdOWWuwK7QzaGrX8nzR4axB5GAOGENJgwGi44o5fmaq5uL2W5UoWxLg2jZqLxRVPFipS884g2haaLjNnZlDR5YqFhOqbcHZHUA9QvrrgiKDOSxTPFtQZ3XpHE8Xq2R1F8SmActbvWlAN6PtFDYZA1eDyOGkwabCxIRR33VBS5wZVJwtVX3NDHjVOTmhsHvXr5VYO+y+3bdEbL9IyGC+/eq/p8qih/SF5lOutHJPuDqDWTXdYw/i2DGml2eCK0WU0dbMGoJKFimCYUMIMoJYMmzvDeoZDrbc3+lDZsoAqoM4ZlE9nHi2KAaixOwLdNdCd4hsFNUFnDieLRQ0mixWD8Wb3d4MYrAGHdYbqbp8erEnnW3qohZc71TcZOvOr/jza6BrEHRqqtubDIwbYXL0y88p+o+4TzhvUN4O+BfQ9XFTsZroZQDmK4gq7709TFBtBKe4EdKfI/SFUF1DnKopnBipcFF8AKIsodhhFlbP79FG9bwF9M+gb70c0oKJCdeyjaAMNeURDQ84ODTAVvO7d1dCdFZTiewh1D4rHh9qovoG7HtS0eZRIl0eJDHmU6eGCF/h0mfm4jRjceWbmMaHqMbiCmr2EKaAKqLSgLJ05hT1k9AynKoppVGc+EsVJQpW+Rxi20fH8Bc5wpvMKZzjTedUWor+oQwsF4KUxtNAReHSEPkg4R74HUWwbodU2giWcsI0ooWJtBAlVbX8w1B4UHXcTRevBUAuojKBmLYotoIIElB4UOkIbRLEPqKhQxxjoASjbCM2h4dlDqqC0A75dbsFQUVCxoRpyk/A8iqbNow7cBYjiBKEqV+kAa+JbOZEo7txhN6qnKE7Wp7iCmr2EKaAKqLSgxp05PVJnTqC7pKLYI1Tpe4Rh25kj64kM644Qw778Coji2tWd3XcNRXGqUPUYCADvkkeFKE1DHqWI4vEIHZNH2SdOxqGa8qju7HTcTRStB0MtoDKCKqL4OC1KFcXulTnSI3XHzjyghzwjUWyYYSfK69jIu9mur2PX0IP6qjfIo7jw8o266wwlj/JyZ/WNuQvrdZBU2tSj6USxqzu0Rwt+UhzY+breyrOXMAVUAZUTVIUc4XR2YzLhBoroQFV2UMlC1WPw6/ujRz0/36aRifuPes6+odGPej34s86jUoVaRPFFSJgCavagZj17gIzQ2NnVmu0sh92mXNfCQHcCukuwFmYc6tCZY74RUPrJYscJdOskN0wPMs2Z60N1dmeredh6qXhRHJxwap7CpAoVwVAkDBYqgqGAKqCmBhV844eBIhGgkoUaBEq5TNBQFyEFtSg3d6pvNVTLDGdgqBYMZyiKSRHFwDjBzLyAKqCOB6qIYjsoiygOWnytF8U0oyimQ2eO+UZATbEw6SJWV41vpvTbdJ+dKMZuFddbuUiYAqqAKqCOAcpRbgVtT9H7zrEjGc2xI5lVaB5kWtJQNHtMFsdhHkXhRVV8x6/Xiw91jOFwvZ5yxGln5kEJ5zjUPuFEfY8xhIAqWq+ASguqiOKQTN9hht1HFA+gMojiqIcB2Lerkj1d7Tw0o304Y9z1xn4fzusmaL2UX82tj+ijlGZFD0SxMCScBLpDRXEFQxWHojhJqACD0pxLZl4kTAFVQJ02qJyi+KK26Y551dvxrXRlm24v36Y3x5VtulOFikTXGUTf+j3ft9K3/uBtuhOL4goVxa4JZ3cE9QBVtF4BlRZUEcVRLSpYFOMznHbhGg4qSBQr3b3fqOc6TMFRL2ZZrxpqwKgXtKC5H/X0eVTZplsJNehWjs/Moe8Tz8w7366gZi9hCqgCKi2oaTvznNt0T/jtqpg5c8OmYCFz5vY9xkB60KQK1TRnjl7U8Vba6I5kObfppshFVduI1zbd41DRV+LV9le26daGqsdQQGUENWtRbAE1l2269clEDwoZoe09ZJW2M4fuTu+bCxVMILK/cTc3UTy+UfN8uwrz7bheLzBUPQZXULOXMJOCWtfdf7rPvJLuTD5Gh5DXl/yJ8IfXHz/b8vqjLYrxOjZ+Ikb3ox+vD9OC0nfmGbbpzlPyfLuKHow7UyxMyg5qikoo4AkEP/SncMCP26Y7T8mURx1z8XV2ULGh6jEUUBlBhYviyweVSBRPASrxt6uOs013blCxoSo1P9im2wZemelANzyRRg3dHUyc5M+jkFCboFDHNVe0Xs5tuqcDlSJUPQbXWzmJhHEqb7cvb1GgLkDrOZT1F+Ocfa3tR84a1N9+gozQv6cIKt0iJPXGrzxB3fG9b/6vB6hkoeoxwMeh3SwRa8aGfKAq5GG1gA9UEUN15w7qnXTPZ7cnIu8eoMahsi5U5hUqgiHw21VZ86j/ONzEhv/n+DN8R7Kz/naVpawZeK5XMdcO/ZQkzDSgVgI+ABWrAkpT3lVQrp3U/EDdC+hO3J8iKKRLC1GalifFlrJk4Bkk2FPEGVRsZ27/dhXXLkJittexfb7iYSl/yN5d3ZBfjj9L8RUPa83D1kv5KE2fpzD3g++tO9e+3Dcz952RPEkJ87UHVTn/aI5a7+6ji4F83BVQxvK5oZzTzafHT44OKlhpHp7dp9aLxePb26PXDz6Tb9ONiWK4CKk32iVX28sku/vW4K1B5WE1MJpGGjUwuqFkcPfqVW/v8uoXqjCFKmsugLvedw8+oygWN/bKxpQbkeXhwvSiWHzkBfVBL0TCUO7X53iWR34xoNh3TlDfLGGoSUH5Ptzahus+Ae5d/rKU19QKyjHTrxRQO8thm+5tL7rJB2ojwrZJrtBQ9aD0K5KsC5wc9wHbGe7CzbesmsShajyYRHF7FVIpTedHBX7l3dqcQ/oU7FZxvZWjdcHXc3pMz19ZQj2a1pPu+FPidxCu3znLEupxQQkqONusnla7cv9PW1ZjY4UY9+3fT4qx2ggusoV6XFA7153RzTVKo4EGQYwGGt2JmMgc6nFBUWyEDlviMW2o9H9NLaGyuwVnzgAAAABJRU5ErkJggg==" alt=""></div>
+      <div class="cell data-cell">
+        <span class="highlight">Móvil - 3G - WIFI - 8GB</span><br>
+        Comprar: <span class="highlight underline">399€</span> <span class="strike-through">349€</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
