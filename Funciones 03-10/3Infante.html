@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript">
+function calcularHipotenusa(base, altura) {
+    return Math.sqrt(base*base + altura*altura);
+}
+
+function calcularPerimetro(base, altura) {
+    return base + altura + calcularHipotenusa(base, altura);
+}
+
+function calcularSuperficie(base, altura) {
+    return 0.5 * base * altura;
+}
+
+function calcularTriangulo() {
+    var base = parseFloat(prompt("Ingrese la base del triángulo:"));
+    var altura = parseFloat(prompt("Ingrese la altura del triángulo:"));
+
+    var hipotenusa = calcularHipotenusa(base, altura);
+    var perimetro = calcularPerimetro(base, altura);
+    var superficie = calcularSuperficie(base, altura);
+
+    alert("Hipotenusa: " + hipotenusa.toFixed(2) + "\nPerímetro: " + perimetro.toFixed(2) + "\nSuperficie: " + superficie.toFixed(2));
+}
+
+function volverAlIndice() {
+    window.location.href = '../Funciones%2003-10/indexInfante.html';
+}
+</script>
+</head>
+<body>
+
+<button onclick="calcularTriangulo()">Calcular Triángulo</button>
+
+<button onclick="volverAlIndice()">Volver al Índice</button>
+
+</body>
+</html>
+

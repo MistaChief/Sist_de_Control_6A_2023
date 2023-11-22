@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript">
+function esTriangulo(a, b, c) {
+    return a + b > c && a + c > b && b + c > a;
+}
+
+function verificarTriangulo() {
+    var lado1 = parseFloat(prompt("Ingrese el primer lado del triángulo:"));
+    var lado2 = parseFloat(prompt("Ingrese el segundo lado del triángulo:"));
+    var lado3 = parseFloat(prompt("Ingrese el tercer lado del triángulo:"));
+
+    var esTrianguloResult = esTriangulo(lado1, lado2, lado3);
+
+    alert("¿Es un triángulo? " + esTrianguloResult);
+}
+
+function volverAlIndice() {
+    window.location.href = '../Funciones%2003-10/indexInfante.html';
+}
+</script>
+</head>
+<body>
+
+<button onclick="verificarTriangulo()">Verificar Triángulo</button>
+
+<button onclick="volverAlIndice()">Volver al Índice</button>
+
+</body>
+</html>
