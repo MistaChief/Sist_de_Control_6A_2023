@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuito RLC en Serie</title>
+    <script>
+        function calculateXL(F, C) {
+            return 2 * Math.PI * F * C;
+        }
+
+        function calculateXC(F, C) {
+            return 1 / (2 * Math.PI * F * C);
+        }
+
+        function calculateImpedance(R, XL, XC) {
+            return Math.sqrt(Math.pow(R, 2) + Math.pow((XL - XC), 2));
+        }
+
+        function calculatePhi(XL, XC, R) {
+            return Math.atan((XL - XC) / R);
+        }
+
+        function calculateRealPart(R, XL, XC) {
+            return R;
+        }
+
+        function calculateImaginaryPart(XL, XC) {
+            return XL - XC;
+        }
+
+        function calculate() {
+            let R = parseFloat(document.getElementById("resistencia").value);
+            let L = parseFloat(document.getElementById("inductancia").value);
+            let C = parseFloat(document.getElementById("capacitancia").value);
+            let F = parseFloat(document.getElementById("frecuencia").value);
+
+            let XL = calculateXL(F, C);
+            let XC = calculateXC(F, C);
+
+            let impedance = calculateImpedance(R, XL, XC);
+            let phi = calculatePhi(XL, XC, R);
+            let realPart = calculateRealPart(R, XL, XC);
+            let imaginaryPart = calculateImaginaryPart(XL, XC);
+
+            document.getElementById("resultados").innerHTML =
+                "XL = " + XL + "<br>" +
+                "XC = " + XC + "<br>" +
+                "Z = " + impedance + "<br>" +
+                "Phi = " + phi + "<br>" +
+                "Parte Real de Z = " + realPart + "<br>" +
+                "Parte Imaginaria de Z = " + imaginaryPart;
+        }
+    </script>
+</head>
+<body>
+    <h1>Circuito RLC en Serie</h1>
+    <label for="resistencia">Resistencia (R):</label>
+    <input type="number" id="resistencia" step="any"><br>
+
+    <label for="inductancia">Inductancia (L):</label>
+    <input type="number" id="inductancia" step="any"><br>
+
+    <label for="capacitancia">Capacitancia (C):</label>
+    <input type="number" id="capacitancia" step="any"><br>
+
+    <label for="frecuencia">Frecuencia (F):</label>
+    <input type="number" id="frecuencia" step="any"><br>
+
+    <button onclick="calculate()">Calcular</button>
+
+    <h2>Resultados:</h2>
+    <div id="resultados"></div>
+</body>
+</html>

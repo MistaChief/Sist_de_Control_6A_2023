@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energía Mecánica</title>
+    <script>
+        function pedirDatos() {
+            let masa = parseFloat(prompt("Ingrese la masa del cuerpo (kg):"));
+            let altura = parseFloat(prompt("Ingrese la altura desde la que cae el cuerpo (m):"));
+
+            let energiaPotencial = calcularEp(masa, altura);
+
+            let velocidadAlSuelo = calcularVelocidadAlSuelo(energiaPotencial, masa);
+
+            mostrarResultados(energiaPotencial, velocidadAlSuelo);
+        }
+
+        function calcularEp(m, h) {
+            let g = 9.8; // Aceleración debida a la gravedad en m/s^2
+            return m * g * h;
+        }
+
+        function calcularVelocidadAlSuelo(Ep, m) {
+            let velocidad = Math.sqrt(2 * Ep / m);
+            return velocidad;
+        }
+
+        function mostrarResultados(energiaPotencial, velocidadAlSuelo) {
+            document.getElementById("resultados").innerHTML =
+                "Energía Potencial: " + energiaPotencial.toFixed(2) + " J<br>" +
+                "Velocidad al Suelo: " + velocidadAlSuelo.toFixed(2) + " m/s<br>";
+
+            if (velocidadAlSuelo > 100) {
+                document.getElementById("mensaje").innerHTML = "¡Qué rápido!";
+            } else {
+                document.getElementById("mensaje").innerHTML = "Va lento.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Cálculo de Energía Mecánica</h1>
+    <button onclick="pedirDatos()">Calcular</button>
+
+    <h2>Resultados:</h2>
+    <div id="resultados"></div>
+    <div id="mensaje"></div>
+</body>
+</html>
